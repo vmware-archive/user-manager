@@ -16,7 +16,7 @@ public class UsersControllerTest {
     @Test
     public void test_index_returnsUsers_onSuccess() throws Exception {
         UserRepo repo = mock(UserRepo.class);
-        when(repo.all()).thenReturn(
+        when(repo.findAll()).thenReturn(
                 singletonList(new User(1, "adam", "secret"))
         );
         UsersController controller = new UsersController(repo);

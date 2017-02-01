@@ -1,11 +1,18 @@
 package io.pivotal;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
-import static java.util.Arrays.asList;
+@Repository
+class UserRepo {
+    private UserDataMapper userDataMapper;
 
-public class UserRepo {
-    public List<User> all() {
-        return asList(new User(1, "bob","secret"));
+    UserRepo(UserDataMapper userDataMapper) {
+        this.userDataMapper = userDataMapper;
+    }
+
+    List<User> findAll() {
+        return userDataMapper.findAll();
     }
 }

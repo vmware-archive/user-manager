@@ -17,6 +17,6 @@ public class UsersController {
 
     @GetMapping
     public List<User> index() {
-        return userRepo.all();
+        return userRepo.findAll();
     }
 }
