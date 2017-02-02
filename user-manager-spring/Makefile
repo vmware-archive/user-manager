@@ -1,20 +1,20 @@
 refreshdb: refreshdb-dev refreshdb-test
 
 migrate-dev:
-	psql -d user_management_dev -f ./src/main/resources/db/migration.sql
+	psql -d user_manager_dev -f ./src/main/resources/db/migration.sql
 
 migrate-test:
-	psql -d user_management_test -f ./src/main/resources/db/migration.sql
+	psql -d user_manager_test -f ./src/main/resources/db/migration.sql
 
 refreshdb-dev:
-	dropdb --if-exists -e user_management_dev
-	createdb -e user_management_dev
-	psql -d user_management_dev -f ./src/main/resources/db/migration.sql
+	dropdb --if-exists -e user_manager_dev
+	createdb -e user_manager_dev
+	psql -d user_manager_dev -f ./src/main/resources/db/migration.sql
 
 refreshdb-test:
-	dropdb --if-exists -e user_management_test
-	createdb -e user_management_test
-	psql -d user_management_test -f ./src/main/resources/db/migration.sql
+	dropdb --if-exists -e user_manager_test
+	createdb -e user_manager_test
+	psql -d user_manager_test -f ./src/main/resources/db/migration.sql
 
 tests:
 	./gradlew clean test build
