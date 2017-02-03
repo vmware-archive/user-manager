@@ -1,3 +1,10 @@
 import React from 'react'
 
-export default () => <h1>User Manager</h1>
+import UsersContainer from './UsersContainer'
+
+export default () => (
+  <div>
+    <h1>User Manager</h1>
+    <UsersContainer/>
+  </div>
+)

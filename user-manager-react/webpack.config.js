@@ -3,12 +3,12 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: './app/index.js',
     output: {
         path: __dirname + '/dist',
         filename: 'index_bundle.js'
     },
-    plugins: [new HtmlWebpackPlugin({template: './src/index.html'})],
+    plugins: [new HtmlWebpackPlugin({template: './app/index.html'})],
     module: {
         loaders: [
             {
