@@ -22,7 +22,7 @@ tests:
 start:
 	java -jar build/libs/osusume-java-spring-0.0.1-SNAPSHOT.jar
 
-ci: changeperms startdb changeuser
+ci-old: changeperms startdb changeuser
 
 changeperms:
 	chown postgres:postgres -R /tmp/build
@@ -32,3 +32,6 @@ changeuser:
 
 startdb:
 	/etc/init.d/postgresql start
+
+ci:
+	./bin/ci.sh
