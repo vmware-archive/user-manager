@@ -22,7 +22,10 @@ tests:
 start:
 	java -jar build/libs/osusume-java-spring-0.0.1-SNAPSHOT.jar
 
-ci: startdb changeuser
+ci: changeperms startdb changeuser
+
+changeperms:
+	chown postgres:postgres -R /tmp/build
 
 changeuser:
 	sudo -u postgres -H sh -c "dropdb --if-exists -e user_manager_test && createdb -e user_manager_test && psql -d user_manager_test -f ./src/main/resources/db/migration.sql && ./gradlew clean test build"
