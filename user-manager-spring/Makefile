@@ -22,7 +22,12 @@ tests:
 start:
 	java -jar build/libs/osusume-java-spring-0.0.1-SNAPSHOT.jar
 
-ci: startdb refreshdb-test tests
+ci: changeuser startdb refreshdb-test tests
+
+changeuser:
+	whoami
+	su - postgres
+	whoami
 
 startdb:
 	/etc/init.d/postgresql start
