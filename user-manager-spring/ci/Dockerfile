@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     rm -Rf /var/lib/apt/lists/*
 
 # Override postgres connection settings to allow local TCP
-COPY ./pg_hba_sample.conf /etc/postgresql/$POSTGRESQL_VERSION/main/pg_hba.conf
+COPY ./ci/pg_hba_sample.conf /etc/postgresql/$POSTGRESQL_VERSION/main/pg_hba.conf
 RUN chown postgres:postgres /etc/postgresql/$POSTGRESQL_VERSION/main/pg_hba.conf
 
 # Prepare to run tests

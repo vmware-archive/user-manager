@@ -23,7 +23,7 @@ start:
 	java -jar build/libs/osusume-java-spring-0.0.1-SNAPSHOT.jar
 
 ci:
-	./ci/bin/ci.sh
+	./bin/ci.sh
 
 docker-build:
 	docker build -f ./ci/Dockerfile  -t tokyobeach/user_manager_spring .
