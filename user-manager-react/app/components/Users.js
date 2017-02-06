@@ -1,5 +1,4 @@
 import React from 'react'
-import { get } from '../helpers/fetcher'
 
 import UserListRow from './UserListRow'
 

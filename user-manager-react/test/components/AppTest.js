@@ -5,8 +5,7 @@ import App from '../../app/components/App'
 
 describe('App', () => {
     it('displays the title', () => {
-	const app = shallow(<App/>)
-
+        const app = shallow(<App/>)
         expect(app.contains(<h1>User Manager</h1>)).toBe(true)
     })
 })
