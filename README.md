@@ -1,32 +1,10 @@
 # User Manager
 
-Experiments during beach time with Java Spring.
+Experiments during beach time with Java Spring and React.
 
-## Getting Started
+Both apps are Git submodules.
 
-### user-manager-spring
+## Tests
 
-#### Dependencies
-- Java
-- Postgresql
-
-#### Setup steps
-- Setup the database
-`make refreshdb`
-
-- start the app
-`make start`
-
-- run the tests
-`make tests`
-
-### user-manager-react
-#### Dependencies
-- node/npm
-
-#### Setup steps
-- start the app
-`make start`
-
-- run the tests
-`make tests`
+`make tests-react`
+`make tests-spring`
