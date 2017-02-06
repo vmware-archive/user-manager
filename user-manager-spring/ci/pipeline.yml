@@ -1,0 +1,25 @@
+resources:
+- name: user-manager
+  type: git
+  source:
+    uri: https://github.com/pivotal-tokyo/user-manager
+    branch: docker-practice
+
+jobs:
+- name: test
+  plan:
+  - get: user-manager
+    trigger: true
+  - task: run-tests
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: tokyobeach/user_manager_spring}
+      inputs:
+      - name: user-manager
+      run:
+        dir: user-manager/user-manager-spring
+        path: make
+        args:
+        - ci
