@@ -1,0 +1,6 @@
+[submodule "user-manager-react"]
+	path = user-manager-react
+	url = git@github.com:pivotal-tokyo/user-manager-react.git
+[submodule "user-manager-spring"]
+	path = user-manager-spring
+	url = git@github.com:pivotal-tokyo/user-manager-spring.git
