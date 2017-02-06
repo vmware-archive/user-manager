@@ -24,4 +24,5 @@ start:
 
 ci: startdb refreshdb-test tests
 
-startdb: /etc/init.d/postgresql start
+startdb:
+	/etc/init.d/postgresql start
