@@ -25,7 +25,7 @@ public class UsersControllerTest {
         mockController.perform(MockMvcRequestBuilders.get("/users"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].id", is(1)))
-                .andExpect(jsonPath("$[0].username", is("adam")))
+                .andExpect(jsonPath("$[0].username", is("bob")))
                 .andExpect(jsonPath("$[0].password", is("secret")));
     }
 }
