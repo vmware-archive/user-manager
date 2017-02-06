@@ -25,4 +25,4 @@ start:
 ci: startdb refreshdb-test tests
 
 startdb:
-	sudo /etc/init.d/postgresql start
+	/etc/init.d/postgresql start
