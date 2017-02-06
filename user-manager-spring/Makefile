@@ -21,3 +21,5 @@ tests:
 
 start:
 	java -jar build/libs/osusume-java-spring-0.0.1-SNAPSHOT.jar
+
+ci: refreshdb-test tests
