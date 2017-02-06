@@ -22,12 +22,10 @@ tests:
 start:
 	java -jar build/libs/osusume-java-spring-0.0.1-SNAPSHOT.jar
 
-ci: changeuser startdb refreshdb-test tests
+ci: startdb changeuser tests
 
 changeuser:
-	whoami
-	su - postgres
-	whoami
+	sudo -u postgres -c "dropdb --if-exists -e user_manager_test && createdb -e user_manager_test && psql -d user_manager_test -f ./src/main/resources/db/migration.sql"
 
 startdb:
 	/etc/init.d/postgresql start
