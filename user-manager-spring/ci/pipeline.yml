@@ -22,4 +22,4 @@ jobs:
         dir: user-manager/user-manager-spring
         path: make
         args:
-        - ci
+        - runci
