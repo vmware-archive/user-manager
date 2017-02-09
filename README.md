@@ -23,4 +23,10 @@ Both apps are Git submodules.
 - Install [Fly CLI for Concourse](https://concourse.ci/downloads.html)
 - `fly -t ci login http://192.168.100.4:8080/`
 - `fly -t ci set-pipeline -p user-manager -c ci/pipeline.yml`
- 
+
+## Todos:
+
+- Complete integration tests
+- Complete CI pipeline (possibly some automation on parent repo w/ Git submodules)
+- Experiment with converting mature React app to Redux
+- Experiment with Spring Security
